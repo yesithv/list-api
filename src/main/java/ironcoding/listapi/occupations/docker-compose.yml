@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+
+  service_postgres:
+    image: postgres
+    container_name: container_bdpostgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      DATABASE_HOST: 127.0.0.1
+      POSTGRES_DB: db_nutryapp
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+
+  service_pgadmin:
+    image: dpage/pgadmin4
+    container_name: container_pgadmin
+    restart: always
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
