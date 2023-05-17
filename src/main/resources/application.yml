@@ -10,10 +10,10 @@ spring:
     database: POSTGRESQL
     hibernate:
       ddl-auto: create-drop
-    show-sql: true
+    show-sql: true # Mostrar las instrucciones sql en la consola
     properties:
       hibernate:
-        format_sql: true
+        format_sql: false # Formateo el texto del sql
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
 server:
