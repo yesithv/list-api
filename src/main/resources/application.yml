@@ -11,6 +11,7 @@ spring:
     hibernate:
       ddl-auto: create-drop
     show-sql: true # Mostrar las instrucciones sql en la consola
+    generate-ddl: true
     properties:
       hibernate:
         format_sql: false # Formateo el texto del sql

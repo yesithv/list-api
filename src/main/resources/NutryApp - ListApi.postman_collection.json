@@ -1,0 +1,490 @@
+{
+	"info": {
+		"_postman_id": "715a4474-fb44-4033-9576-da32d35c44d3",
+		"name": "NutryApp - ListApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17690723"
+	},
+	"item": [
+		{
+			"name": "All Occupations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8801/list-api/v1/occupations",
+					"host": [
+						"localhost"
+					],
+					"port": "8801",
+					"path": [
+						"list-api",
+						"v1",
+						"occupations"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "All Occupations",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8801/list-api/v1/occupations",
+							"host": [
+								"localhost"
+							],
+							"port": "8801",
+							"path": [
+								"list-api",
+								"v1",
+								"occupations"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 May 2023 21:34:58 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"idOccupation\": \"bfd34ae0-1912-479e-a530-54a4e7150438\",\n        \"enable\": true,\n        \"name\": \"Abogado\"\n    },\n    {\n        \"idOccupation\": \"b2903d8d-8697-42fd-a868-641074c0f36e\",\n        \"enable\": true,\n        \"name\": \"Biólogo\"\n    },\n    {\n        \"idOccupation\": \"1f9b4cb3-9ed6-4442-b6d6-574565229e8e\",\n        \"enable\": true,\n        \"name\": \"Electrisista\"\n    },\n    {\n        \"idOccupation\": \"cc8a1d8d-c26d-470a-88c3-8cbbe33d681c\",\n        \"enable\": true,\n        \"name\": \"Enfermero\"\n    },\n    {\n        \"idOccupation\": \"111655d1-5e86-4242-be81-15de3d568bfe\",\n        \"enable\": true,\n        \"name\": \"Secretaria\"\n    },\n    {\n        \"idOccupation\": \"af418a64-0652-4b8f-bfae-eccf08ed88a0\",\n        \"enable\": true,\n        \"name\": \"Sicólogo\"\n    },\n    {\n        \"idOccupation\": \"b3824f4c-02cf-490e-b138-1501e35e99c6\",\n        \"enable\": true,\n        \"name\": \"Botánico\"\n    },\n    {\n        \"idOccupation\": \"72ea636b-c0f2-4f7a-9ac2-c19604f59d91\",\n        \"enable\": true,\n        \"name\": \"Médico\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Save",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = JSON.parse(responseBody);\r",
+							"pm.environment.set(\"occupation_token\", response.idOccupation);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\t{\r\n\t\t\"idOccupation\": \"{{$guid}}\",\r\n\t\t\"enable\": true,\r\n\t\t\"name\": \"Estudiante\"\r\n\t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8801/list-api/v1/occupations",
+					"host": [
+						"localhost"
+					],
+					"port": "8801",
+					"path": [
+						"list-api",
+						"v1",
+						"occupations"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Save",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\r\n\t\t\"idOccupation\": \"{{$guid}}\",\r\n\t\t\"enable\": true,\r\n\t\t\"name\": \"Estudiante\"\r\n\t}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8801/list-api/v1/occupations",
+							"host": [
+								"localhost"
+							],
+							"port": "8801",
+							"path": [
+								"list-api",
+								"v1",
+								"occupations"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 May 2023 21:39:04 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"idOccupation\": \"7aeb2dfa-bc65-4260-873a-d287bb8c332b\",\n    \"enable\": true,\n    \"name\": \"Estudiante\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Occupation by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8801/list-api/v1/occupations/{{occupation_token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8801",
+					"path": [
+						"list-api",
+						"v1",
+						"occupations",
+						"{{occupation_token}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Occupation by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8801/list-api/v1/occupations/{{occupation_token}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8801",
+							"path": [
+								"list-api",
+								"v1",
+								"occupations",
+								"{{occupation_token}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 May 2023 21:39:30 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"idOccupation\": \"7aeb2dfa-bc65-4260-873a-d287bb8c332b\",\n    \"enable\": true,\n    \"name\": \"Estudiante\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = JSON.parse(responseBody);\r",
+							"pm.environment.set(\"occupation_token\", response.idOccupation);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\t{\r\n\t\t\"enable\": false,\r\n\t\t\"name\": \"Estudiante de último semestre\"\r\n\t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8801/list-api/v1/occupations/{{occupation_token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8801",
+					"path": [
+						"list-api",
+						"v1",
+						"occupations",
+						"{{occupation_token}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\r\n\t\t\"enable\": false,\r\n\t\t\"name\": \"Estudiante de último semestre\"\r\n\t}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8801/list-api/v1/occupations/{{occupation_token}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8801",
+							"path": [
+								"list-api",
+								"v1",
+								"occupations",
+								"{{occupation_token}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 May 2023 21:39:45 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"idOccupation\": \"7aeb2dfa-bc65-4260-873a-d287bb8c332b\",\n    \"enable\": false,\n    \"name\": \"Estudiante de último semestre\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8801/list-api/v1/occupations/{{occupation_token}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8801",
+					"path": [
+						"list-api",
+						"v1",
+						"occupations",
+						"{{occupation_token}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8801/list-api/v1/occupations/{{occupation_token}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8801",
+							"path": [
+								"list-api",
+								"v1",
+								"occupations",
+								"{{occupation_token}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "JSON",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 May 2023 21:40:09 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
