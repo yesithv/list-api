@@ -1,5 +1,4 @@
-package ironcoding.listapi.occupations.model;
-
+package ironcoding.listapi.diagnostics.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -17,18 +16,27 @@ import java.util.UUID;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "occupations")
-public class OccupationEntity implements Serializable {
+@Table(name = "diagnostics")
+public class DiagnosticEntity implements Serializable {
 
     @Id
     @GeneratedValue
     @Column(columnDefinition = "uuid", updatable = false)
-    private UUID idOccupation;
+    private UUID idDiagnostic;
+
+    @Column
+    private DiagnosticType diagnosticType;
 
     @Column
     private boolean enable;
 
     @Column
-    private String name;
+    private String code;
+
+    @Column
+    private String Description;
+
+    @Column
+    private Gender gender;
 
 }
