@@ -3,12 +3,16 @@ package ironcoding.listapi.diagnostics.services;
 import ironcoding.listapi.diagnostics.model.DiagnosticEntity;
 import ironcoding.listapi.diagnostics.model.DiagnosticType;
 import ironcoding.listapi.diagnostics.repository.DiagnosticRepository;
+import ironcoding.listapi.exceptions.ListNotFoundException;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
+
+import static ironcoding.listapi.exceptions.ErrorCatalog.DONT_FIND_DIAGNOSTIC;
+import static ironcoding.listapi.utils.ListType.DIAGNOSTICS;
 
 @Slf4j
 @Service
@@ -25,6 +29,8 @@ public class DiagnosticServiceImpl implements DiagnosticServices {
 
     @Override
     public DiagnosticEntity updateDiagnostic(UUID idDiagnostic, DiagnosticEntity diagnosticEntity) {
+        log.info("Enter to updateDiagnostic(). IdDiagnostic: [{}]. New diagnostic: [{}]", idDiagnostic, diagnosticEntity);
+        var oldDiagnostic = diagnosticRepository.findById(idDiagnostic).orElseThrow(() -> new ListNotFoundException(String.format(DONT_FIND_DIAGNOSTIC.getDescription(), idDiagnostic), DONT_FIND_DIAGNOSTIC.getCode(), DIAGNOSTICS));
         return null;
     }
 

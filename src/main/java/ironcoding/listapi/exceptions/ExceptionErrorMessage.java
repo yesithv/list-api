@@ -1,11 +1,11 @@
-package ironcoding.listapi.errors;
+package ironcoding.listapi.exceptions;
 
 import lombok.Builder;
 import lombok.Data;
 
 @Data
 @Builder
-public class ErrorMessage {
+public class ExceptionErrorMessage {
 
     private String errorCode;
 

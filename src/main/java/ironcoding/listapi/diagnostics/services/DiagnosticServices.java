@@ -17,4 +17,5 @@ public interface DiagnosticServices {
     DiagnosticEntity findDiagnosticById(UUID idDiagnostic);
 
     List<DiagnosticEntity> findAllDiagnosticsByType(DiagnosticType diagnosticType);
+
 }
