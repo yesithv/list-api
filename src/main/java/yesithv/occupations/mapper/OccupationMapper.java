@@ -13,6 +13,7 @@ public interface OccupationMapper {
     @Mapping(target = "idOccupation", source = "oldOccupation.idOccupation")
     @Mapping(target = "enable", source = "newOccupation.enable")
     @Mapping(target = "name", source = "newOccupation.name")
+    @Mapping(target = "anniversary", source = "newOccupation.anniversary")
     OccupationEntity updateOccupation(OccupationEntity oldOccupation, OccupationEntity newOccupation);
 
 }

@@ -1,9 +1,11 @@
 package yesithv.exceptions;
 
+import lombok.EqualsAndHashCode;
 import yesithv.utils.ListType;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @Data
 public class ListNotFoundException extends RuntimeException {

@@ -24,7 +24,7 @@ public class DiagnosticEntity implements Serializable {
 
     private String code;
 
-    private String Description;
+    private String description;
 
     private Gender gender;
 

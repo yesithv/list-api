@@ -13,7 +13,7 @@ public interface DiagnosticMapper {
     @Mapping(target = "diagnosticType", source = "newDiagnostic.diagnosticType")
     @Mapping(target = "enable", source = "newDiagnostic.enable")
     @Mapping(target = "code", source = "newDiagnostic.code")
-    @Mapping(target = "Description", source = "newDiagnostic.Description")
+    @Mapping(target = "description", source = "newDiagnostic.description")
     @Mapping(target = "gender", source = "newDiagnostic.gender")
     DiagnosticEntity updateDiagnostic(DiagnosticEntity oldDiagnostic, DiagnosticEntity newDiagnostic);
 }
