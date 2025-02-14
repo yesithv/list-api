@@ -1,9 +1,11 @@
 package yesithv.occupations.mapper;
 
-import yesithv.occupations.model.OccupationEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
+import yesithv.occupations.model.OccupationCollection;
+
+import java.time.LocalDateTime;
 
 @Mapper
 public interface OccupationMapper {
@@ -14,6 +16,10 @@ public interface OccupationMapper {
     @Mapping(target = "enable", source = "newOccupation.enable")
     @Mapping(target = "name", source = "newOccupation.name")
     @Mapping(target = "anniversary", source = "newOccupation.anniversary")
-    OccupationEntity updateOccupation(OccupationEntity oldOccupation, OccupationEntity newOccupation);
+    @Mapping(target = "lastModified", expression = "java(getCurrentDateTime())")
+    OccupationCollection updateOccupation(OccupationCollection oldOccupation, OccupationCollection newOccupation);
 
+    default LocalDateTime getCurrentDateTime() {
+        return LocalDateTime.now();
+    }
 }

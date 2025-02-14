@@ -1,6 +1,6 @@
 package yesithv.diagnostics.services;
 
-import yesithv.diagnostics.model.DiagnosticEntity;
+import yesithv.diagnostics.model.DiagnosticCollection;
 import yesithv.diagnostics.model.DiagnosticType;
 
 import java.util.List;
@@ -8,13 +8,13 @@ import java.util.UUID;
 
 public interface DiagnosticServices {
 
-    DiagnosticEntity getDiagnosticById(UUID idDiagnostic);
+    DiagnosticCollection getDiagnosticById(UUID idDiagnostic);
 
-    List<DiagnosticEntity> getAllDiagnosticsByType(DiagnosticType diagnosticType);
+    List<DiagnosticCollection> getAllDiagnosticsByType(DiagnosticType diagnosticType);
 
-    DiagnosticEntity saveDiagnostic(DiagnosticEntity diagnosticEntity);
+    DiagnosticCollection saveDiagnostic(DiagnosticCollection diagnosticCollection);
 
-    DiagnosticEntity updateDiagnostic(UUID idDiagnostic, DiagnosticEntity diagnosticEntity);
+    DiagnosticCollection updateDiagnostic(UUID idDiagnostic, DiagnosticCollection diagnosticCollection);
 
     void deleteDiagnostic(UUID idDiagnostic);
 

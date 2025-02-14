@@ -1,11 +1,11 @@
 package yesithv.occupations.services;
 
-import yesithv.exceptions.ListNotFoundException;
-import yesithv.occupations.model.OccupationEntity;
-import yesithv.occupations.repository.OccupationRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import yesithv.exceptions.ListNotFoundException;
+import yesithv.occupations.model.OccupationCollection;
+import yesithv.occupations.repository.OccupationRepository;
 
 import java.util.List;
 import java.util.UUID;
@@ -22,7 +22,7 @@ public class OccupationServiceImpl implements OccupationService {
     private final OccupationRepository occupationRepository;
 
     @Override
-    public List<OccupationEntity> getAllOccupations() {
+    public List<OccupationCollection> getAllOccupations() {
         log.info("Enter to getAllOccupations");
         var occupationList = occupationRepository.findByEnable(Boolean.TRUE);
         log.info("Found {} occupations", occupationList.size());
@@ -30,7 +30,7 @@ public class OccupationServiceImpl implements OccupationService {
     }
 
     @Override
-    public OccupationEntity getOccupationById(UUID idOccupation) {
+    public OccupationCollection getOccupationById(UUID idOccupation) {
         log.info("Enter to getOccupationById. idOccupation: {}", idOccupation);
         var occupation = occupationRepository.findById(idOccupation).orElseThrow(() -> new ListNotFoundException(String.format(DONT_FIND_OCCUPATION.getDescription(), idOccupation), DONT_FIND_OCCUPATION.getCode(), OCCUPATIONS));
         log.info("Occupation found ? {}", occupation != null); //TODO: validate
@@ -38,7 +38,7 @@ public class OccupationServiceImpl implements OccupationService {
     }
 
     @Override
-    public OccupationEntity saveOccupation(OccupationEntity newOccupation) {
+    public OccupationCollection saveOccupation(OccupationCollection newOccupation) {
         log.info("Enter to saveOccupation. newOccupation: {}", newOccupation);
         var occupation = occupationRepository.save(newOccupation);
         log.info("Occupation saved ? {}", occupation != null); //TODO: validate
@@ -46,7 +46,7 @@ public class OccupationServiceImpl implements OccupationService {
     }
 
     @Override
-    public OccupationEntity updateOccupation(UUID idOccupation, OccupationEntity newOccupation) {
+    public OccupationCollection updateOccupation(UUID idOccupation, OccupationCollection newOccupation) {
         log.info("Enter to updateOccupation. oldIdOccupation: {}, newOccupation: {}", idOccupation, newOccupation);
         var oldOccupation = occupationRepository.findById(idOccupation).orElseThrow(() -> new ListNotFoundException(String.format(DONT_FIND_OCCUPATION.getDescription(), idOccupation), DONT_FIND_OCCUPATION.getCode(), OCCUPATIONS));
         log.info("Old occupation found ? {}", oldOccupation != null); //TODO: validate

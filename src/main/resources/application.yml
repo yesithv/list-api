@@ -1,21 +1,15 @@
 spring:
   application:
     name: list-api
-  datasource:
-    url: jdbc:postgresql://127.0.0.1:5432/db_nutryapp
-    username: root
-    password: root
-    driver-class-name: org.postgresql.Driver
-  jpa:
-    database: POSTGRESQL
-    hibernate:
-      ddl-auto: create-drop
-    show-sql: true # Mostrar las instrucciones sql en la consola
-    generate-ddl: true
-    properties:
-      hibernate:
-        format_sql: false # Formateo el texto del sql
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+  data:
+    mongodb:
+      authentication-database: admin
+      username: rootuser
+      password: rootpass
+      database: list_api_db
+      port: 27017
+      host: localhost
+      auto-index-creation: true # DiagnosticCollection.code
 
 server:
   port: 8801

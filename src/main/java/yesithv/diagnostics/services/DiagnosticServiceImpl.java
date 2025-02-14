@@ -1,12 +1,12 @@
 package yesithv.diagnostics.services;
 
-import yesithv.diagnostics.model.DiagnosticEntity;
-import yesithv.diagnostics.model.DiagnosticType;
-import yesithv.diagnostics.repository.DiagnosticRepository;
-import yesithv.exceptions.ListNotFoundException;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import yesithv.diagnostics.model.DiagnosticCollection;
+import yesithv.diagnostics.model.DiagnosticType;
+import yesithv.diagnostics.repository.DiagnosticRepository;
+import yesithv.exceptions.ListNotFoundException;
 
 import java.util.List;
 import java.util.UUID;
@@ -23,7 +23,7 @@ public class DiagnosticServiceImpl implements DiagnosticServices {
     private final DiagnosticRepository diagnosticRepository;
 
     @Override
-    public DiagnosticEntity getDiagnosticById(UUID idDiagnostic) {
+    public DiagnosticCollection getDiagnosticById(UUID idDiagnostic) {
         log.info("Enter to getDiagnosticById.  idDiagnostic {}", idDiagnostic);
         var diagnostic = diagnosticRepository.findById(idDiagnostic);
         log.info("Diagnostic found ? {}", diagnostic.isPresent());
@@ -31,7 +31,7 @@ public class DiagnosticServiceImpl implements DiagnosticServices {
     }
 
     @Override
-    public List<DiagnosticEntity> getAllDiagnosticsByType(DiagnosticType diagnosticType) {
+    public List<DiagnosticCollection> getAllDiagnosticsByType(DiagnosticType diagnosticType) {
         log.info("Enter to getAllDiagnosticsByType. diagnosticType: {}", diagnosticType);
         var diagnosticList = diagnosticRepository.findAllEnabledByDiagnosticType(diagnosticType);
         log.info("Diagnostics found: {}", diagnosticList.size());
@@ -39,15 +39,15 @@ public class DiagnosticServiceImpl implements DiagnosticServices {
     }
 
     @Override
-    public DiagnosticEntity saveDiagnostic(DiagnosticEntity diagnosticEntity) {
-        log.info("Enter to saveDiagnostic. New diagnostic: {} ", diagnosticEntity);
-        var diagnostic = diagnosticRepository.save(diagnosticEntity);
+    public DiagnosticCollection saveDiagnostic(DiagnosticCollection diagnosticCollection) {
+        log.info("Enter to saveDiagnostic. New diagnostic: {} ", diagnosticCollection);
+        var diagnostic = diagnosticRepository.save(diagnosticCollection);
         log.info("Diagnostic saved ? {}", diagnostic != null);
         return diagnostic;
     }
 
     @Override
-    public DiagnosticEntity updateDiagnostic(UUID idDiagnostic, DiagnosticEntity newDiagnostic) {
+    public DiagnosticCollection updateDiagnostic(UUID idDiagnostic, DiagnosticCollection newDiagnostic) {
         log.info("Enter to updateDiagnostic. IdDiagnostic: {}. New diagnostic: {}", idDiagnostic, newDiagnostic);
         var oldDiagnostic = diagnosticRepository.findById(idDiagnostic).orElseThrow(() -> new ListNotFoundException(String.format(DONT_FIND_DIAGNOSTIC.getDescription(), idDiagnostic), DONT_FIND_DIAGNOSTIC.getCode(), DIAGNOSTICS));
         log.info("Old diagnostic found ? {}", oldDiagnostic != null);

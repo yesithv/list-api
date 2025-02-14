@@ -3,7 +3,9 @@ package yesithv.diagnostics.mapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
-import yesithv.diagnostics.model.DiagnosticEntity;
+import yesithv.diagnostics.model.DiagnosticCollection;
+
+import java.time.LocalDateTime;
 
 @Mapper
 public interface DiagnosticMapper {
@@ -15,5 +17,10 @@ public interface DiagnosticMapper {
     @Mapping(target = "code", source = "newDiagnostic.code")
     @Mapping(target = "description", source = "newDiagnostic.description")
     @Mapping(target = "gender", source = "newDiagnostic.gender")
-    DiagnosticEntity updateDiagnostic(DiagnosticEntity oldDiagnostic, DiagnosticEntity newDiagnostic);
+    @Mapping(target = "lastModified", expression = "java(getCurrentDateTime())")
+    DiagnosticCollection updateDiagnostic(DiagnosticCollection oldDiagnostic, DiagnosticCollection newDiagnostic);
+
+    default LocalDateTime getCurrentDateTime() {
+        return LocalDateTime.now();
+    }
 }

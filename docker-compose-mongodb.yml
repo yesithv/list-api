@@ -1,0 +1,33 @@
+
+services:
+
+  mongodb:
+    image: mongo
+    container_name: containter_mongodb
+    ports:
+      - 27017:27017
+    volumes:
+      - data:/data
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=rootuser
+      - MONGO_INITDB_ROOT_PASSWORD=rootpass
+
+# Open browser: http://localhost:8081/ credentials are "admin:pass" / or Use another DB client such a IntelliJ, IdeaGrip
+# Create database: list_api_db
+  mongo-express:
+    image: mongo-express
+    container_name: container_mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=rootuser
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=rootpass
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+
+volumes:
+  data: {}
+
+networks:
+  default:
+    name: mongodb_network

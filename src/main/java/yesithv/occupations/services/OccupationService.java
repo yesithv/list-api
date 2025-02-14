@@ -1,19 +1,19 @@
 package yesithv.occupations.services;
 
-import yesithv.occupations.model.OccupationEntity;
+import yesithv.occupations.model.OccupationCollection;
 
 import java.util.List;
 import java.util.UUID;
 
 public interface OccupationService {
 
-    List<OccupationEntity> getAllOccupations();
+    List<OccupationCollection> getAllOccupations();
 
-    OccupationEntity getOccupationById(UUID idOccupation);
+    OccupationCollection getOccupationById(UUID idOccupation);
 
-    OccupationEntity saveOccupation(OccupationEntity newOccupation);
+    OccupationCollection saveOccupation(OccupationCollection newOccupation);
 
-    OccupationEntity updateOccupation(UUID oldIdOccupation, OccupationEntity newOccupation);
+    OccupationCollection updateOccupation(UUID oldIdOccupation, OccupationCollection newOccupation);
 
     void deleteOccupation(UUID idOccupation);
 }
