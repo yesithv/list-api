@@ -15,6 +15,7 @@ public interface DiagnosticMapper {
     @Mapping(target = "diagnosticType", source = "newDiagnostic.diagnosticType")
     @Mapping(target = "enable", source = "newDiagnostic.enable")
     @Mapping(target = "code", source = "newDiagnostic.code")
+    @Mapping(target = "name", source = "newDiagnostic.name")
     @Mapping(target = "description", source = "newDiagnostic.description")
     @Mapping(target = "gender", source = "newDiagnostic.gender")
     @Mapping(target = "lastModified", expression = "java(getCurrentDateTime())")

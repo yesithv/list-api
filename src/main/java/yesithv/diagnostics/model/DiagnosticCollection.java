@@ -23,17 +23,20 @@ public class DiagnosticCollection implements Serializable {
     @Indexed(unique = true)
     private String code;
 
+    private String name;
+
     private String description;
 
     private Gender gender;
 
     private LocalDateTime lastModified;
 
-    public DiagnosticCollection(DiagnosticType diagnosticType, String code, String description, Gender gender) {
+    public DiagnosticCollection(DiagnosticType diagnosticType, String code, String name, String description, Gender gender) {
         this.idDiagnostic = UUID.randomUUID();
         this.diagnosticType = diagnosticType;
         this.enable = Boolean.TRUE;
         this.code = code;
+        this.name = name;
         this.description = description;
         this.gender = gender;
         this.lastModified = LocalDateTime.now();

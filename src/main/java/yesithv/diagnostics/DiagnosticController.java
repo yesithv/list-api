@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import yesithv.diagnostics.model.DiagnosticCollection;
 import yesithv.diagnostics.model.DiagnosticType;
@@ -25,14 +26,14 @@ public class DiagnosticController {
 
     private final DiagnosticServices diagnosticServices;
 
-    @GetMapping("/{}") //TODO: Put the correct paramether
-    public List<DiagnosticCollection> showDiagnosticsByType(DiagnosticType diagnosticType) {
-        return diagnosticServices.getAllDiagnosticsByType(diagnosticType);
-    }
-
     @GetMapping("/{idDiagnostic}")
     public DiagnosticCollection showById(@PathVariable UUID idDiagnostic) {
         return diagnosticServices.getDiagnosticById(idDiagnostic);
+    }
+
+    @GetMapping()
+    public List<DiagnosticCollection> showDiagnosticsByType(@RequestParam DiagnosticType diagnosticType) {
+        return diagnosticServices.getAllDiagnosticsByType(diagnosticType);
     }
 
     @PostMapping
