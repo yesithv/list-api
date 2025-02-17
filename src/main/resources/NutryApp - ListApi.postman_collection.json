@@ -7,27 +7,11 @@
 	},
 	"item": [
 		{
-			"name": "All Occupations",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:8801/list-api/v1/occupations",
-					"host": [
-						"localhost"
-					],
-					"port": "8801",
-					"path": [
-						"list-api",
-						"v1",
-						"occupations"
-					]
-				}
-			},
-			"response": [
+			"name": "Occupations",
+			"item": [
 				{
 					"name": "All Occupations",
-					"originalRequest": {
+					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -43,99 +27,98 @@
 							]
 						}
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "Vary",
-							"value": "Origin"
-						},
-						{
-							"key": "Vary",
-							"value": "Access-Control-Request-Method"
-						},
-						{
-							"key": "Vary",
-							"value": "Access-Control-Request-Headers"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json",
-							"name": "Content-Type",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Date",
-							"value": "Thu, 18 May 2023 21:34:58 GMT"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=60"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
+							"name": "All Occupations",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8801/list-api/v1/occupations",
+									"host": [
+										"localhost"
+									],
+									"port": "8801",
+									"path": [
+										"list-api",
+										"v1",
+										"occupations"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 14 Feb 2025 17:14:39 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"name\": \"Estudiante\",\n        \"anniversary\": null,\n        \"idOccupation\": \"910f342a-9cc0-4336-a29a-807fb02717dd\",\n        \"enable\": true,\n        \"lastModified\": \"2025-02-14T12:14:39.9731618\"\n    },\n    {\n        \"name\": \"Estudiante\",\n        \"anniversary\": null,\n        \"idOccupation\": \"de55c0fa-a17d-4771-a06d-ff6111bada5e\",\n        \"enable\": true,\n        \"lastModified\": \"2025-02-14T12:14:39.9731618\"\n    },\n    {\n        \"name\": \"Ingeniero de sistemas\",\n        \"anniversary\": null,\n        \"idOccupation\": \"626b4db1-e002-41e2-8bb9-da10a8652324\",\n        \"enable\": true,\n        \"lastModified\": \"2025-02-14T12:14:39.9736918\"\n    },\n    {\n        \"name\": \"Ingeniero de petróleos\",\n        \"anniversary\": \"2025-02-14\",\n        \"idOccupation\": \"21c765a8-fa07-42e3-8b96-20034235c104\",\n        \"enable\": true,\n        \"lastModified\": \"2025-02-14T12:14:39.9743089\"\n    },\n    {\n        \"name\": \"Ingeniero de metalúrjico\",\n        \"anniversary\": \"2025-02-14\",\n        \"idOccupation\": \"c3c91fc4-bca4-4771-96f3-6c7b504e8d37\",\n        \"enable\": true,\n        \"lastModified\": \"2025-02-14T12:14:39.9743089\"\n    },\n    {\n        \"name\": \"Ingeniero civil\",\n        \"anniversary\": \"2000-02-14\",\n        \"idOccupation\": \"58e082d6-0423-4fbe-9075-b5650ba5578c\",\n        \"enable\": true,\n        \"lastModified\": \"2025-02-14T12:10:45.074\"\n    },\n    {\n        \"name\": \"Geólogo\",\n        \"anniversary\": \"2000-03-14\",\n        \"idOccupation\": \"d6ca99ce-1ee0-4b98-b9bd-080e91f7dae6\",\n        \"enable\": true,\n        \"lastModified\": \"2025-02-14T12:13:01.677\"\n    },\n    {\n        \"name\": \"Nutricionista Dietista\",\n        \"anniversary\": \"2000-03-12\",\n        \"idOccupation\": \"3331efd9-a6a8-4ac5-967b-c5b1d3f991fc\",\n        \"enable\": true,\n        \"lastModified\": \"2025-02-14T12:13:29.885\"\n    }\n]"
 						}
-					],
-					"cookie": [],
-					"body": "[\n    {\n        \"idOccupation\": \"bfd34ae0-1912-479e-a530-54a4e7150438\",\n        \"enable\": true,\n        \"name\": \"Abogado\"\n    },\n    {\n        \"idOccupation\": \"b2903d8d-8697-42fd-a868-641074c0f36e\",\n        \"enable\": true,\n        \"name\": \"Biólogo\"\n    },\n    {\n        \"idOccupation\": \"1f9b4cb3-9ed6-4442-b6d6-574565229e8e\",\n        \"enable\": true,\n        \"name\": \"Electrisista\"\n    },\n    {\n        \"idOccupation\": \"cc8a1d8d-c26d-470a-88c3-8cbbe33d681c\",\n        \"enable\": true,\n        \"name\": \"Enfermero\"\n    },\n    {\n        \"idOccupation\": \"111655d1-5e86-4242-be81-15de3d568bfe\",\n        \"enable\": true,\n        \"name\": \"Secretaria\"\n    },\n    {\n        \"idOccupation\": \"af418a64-0652-4b8f-bfae-eccf08ed88a0\",\n        \"enable\": true,\n        \"name\": \"Sicólogo\"\n    },\n    {\n        \"idOccupation\": \"b3824f4c-02cf-490e-b138-1501e35e99c6\",\n        \"enable\": true,\n        \"name\": \"Botánico\"\n    },\n    {\n        \"idOccupation\": \"72ea636b-c0f2-4f7a-9ac2-c19604f59d91\",\n        \"enable\": true,\n        \"name\": \"Médico\"\n    }\n]"
-				}
-			]
-		},
-		{
-			"name": "Save",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"var response = JSON.parse(responseBody);\r",
-							"pm.environment.set(\"occupation_token\", response.idOccupation);"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "\t{\r\n\t\t\"idOccupation\": \"{{$guid}}\",\r\n\t\t\"enable\": true,\r\n\t\t\"name\": \"Estudiante\"\r\n\t}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8801/list-api/v1/occupations",
-					"host": [
-						"localhost"
-					],
-					"port": "8801",
-					"path": [
-						"list-api",
-						"v1",
-						"occupations"
 					]
-				}
-			},
-			"response": [
+				},
 				{
-					"name": "Save",
-					"originalRequest": {
+					"name": "Save Occupation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = JSON.parse(responseBody);\r",
+									"pm.environment.set(\"occupation_token\", response.idOccupation);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "\t{\r\n\t\t\"idOccupation\": \"{{$guid}}\",\r\n\t\t\"enable\": true,\r\n\t\t\"name\": \"Estudiante\"\r\n\t}",
+							"raw": "\t{\r\n\t\t\"name\": \"Nutricionista Dietista\",\r\n        \"anniversary\": \"2000-03-12\"\r\n\t}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -155,74 +138,92 @@
 							]
 						}
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "Vary",
-							"value": "Origin"
-						},
-						{
-							"key": "Vary",
-							"value": "Access-Control-Request-Method"
-						},
-						{
-							"key": "Vary",
-							"value": "Access-Control-Request-Headers"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json",
-							"name": "Content-Type",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Date",
-							"value": "Thu, 18 May 2023 21:39:04 GMT"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=60"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
+							"name": "Save",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\t{\r\n\t\t\"name\": \"Nutricionista Dietista\",\r\n        \"anniversary\": \"2000-03-12\"\r\n\t}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8801/list-api/v1/occupations",
+									"host": [
+										"localhost"
+									],
+									"port": "8801",
+									"path": [
+										"list-api",
+										"v1",
+										"occupations"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 14 Feb 2025 17:13:29 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Nutricionista Dietista\",\n    \"anniversary\": \"2000-03-12\",\n    \"idOccupation\": \"3331efd9-a6a8-4ac5-967b-c5b1d3f991fc\",\n    \"enable\": true,\n    \"lastModified\": \"2025-02-14T12:13:29.885391\"\n}"
 						}
-					],
-					"cookie": [],
-					"body": "{\n    \"idOccupation\": \"7aeb2dfa-bc65-4260-873a-d287bb8c332b\",\n    \"enable\": true,\n    \"name\": \"Estudiante\"\n}"
-				}
-			]
-		},
-		{
-			"name": "Occupation by id",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:8801/list-api/v1/occupations/{{occupation_token}}",
-					"host": [
-						"localhost"
-					],
-					"port": "8801",
-					"path": [
-						"list-api",
-						"v1",
-						"occupations",
-						"{{occupation_token}}"
 					]
-				}
-			},
-			"response": [
+				},
 				{
 					"name": "Occupation by id",
-					"originalRequest": {
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = JSON.parse(responseBody);\r",
+									"pm.environment.set(\"occupation_token\", response.idOccupation);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -239,95 +240,83 @@
 							]
 						}
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "Vary",
-							"value": "Origin"
-						},
-						{
-							"key": "Vary",
-							"value": "Access-Control-Request-Method"
-						},
-						{
-							"key": "Vary",
-							"value": "Access-Control-Request-Headers"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json",
-							"name": "Content-Type",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Date",
-							"value": "Thu, 18 May 2023 21:39:30 GMT"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=60"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
+							"name": "Occupation by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8801/list-api/v1/occupations/{{occupation_token}}",
+									"host": [
+										"localhost"
+									],
+									"port": "8801",
+									"path": [
+										"list-api",
+										"v1",
+										"occupations",
+										"{{occupation_token}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 14 Feb 2025 17:14:03 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Nutricionista Dietista\",\n    \"anniversary\": \"2000-03-12\",\n    \"idOccupation\": \"3331efd9-a6a8-4ac5-967b-c5b1d3f991fc\",\n    \"enable\": true,\n    \"lastModified\": \"2025-02-14T12:13:29.885\"\n}"
 						}
-					],
-					"cookie": [],
-					"body": "{\n    \"idOccupation\": \"7aeb2dfa-bc65-4260-873a-d287bb8c332b\",\n    \"enable\": true,\n    \"name\": \"Estudiante\"\n}"
-				}
-			]
-		},
-		{
-			"name": "Update",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"var response = JSON.parse(responseBody);\r",
-							"pm.environment.set(\"occupation_token\", response.idOccupation);"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "\t{\r\n\t\t\"enable\": false,\r\n\t\t\"name\": \"Estudiante de último semestre\"\r\n\t}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8801/list-api/v1/occupations/{{occupation_token}}",
-					"host": [
-						"localhost"
-					],
-					"port": "8801",
-					"path": [
-						"list-api",
-						"v1",
-						"occupations",
-						"{{occupation_token}}"
 					]
-				}
-			},
-			"response": [
+				},
 				{
 					"name": "Update",
-					"originalRequest": {
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = JSON.parse(responseBody);\r",
+									"pm.environment.set(\"occupation_token\", response.idOccupation);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -353,85 +342,94 @@
 							]
 						}
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
+					"response": [
 						{
-							"key": "Vary",
-							"value": "Origin"
-						},
-						{
-							"key": "Vary",
-							"value": "Access-Control-Request-Method"
-						},
-						{
-							"key": "Vary",
-							"value": "Access-Control-Request-Headers"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json",
-							"name": "Content-Type",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Date",
-							"value": "Thu, 18 May 2023 21:39:45 GMT"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=60"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\t{\r\n\t\t\"enable\": false,\r\n\t\t\"name\": \"Estudiante de último semestre\"\r\n\t}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8801/list-api/v1/occupations/{{occupation_token}}",
+									"host": [
+										"localhost"
+									],
+									"port": "8801",
+									"path": [
+										"list-api",
+										"v1",
+										"occupations",
+										"{{occupation_token}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 18 May 2023 21:39:45 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idOccupation\": \"7aeb2dfa-bc65-4260-873a-d287bb8c332b\",\n    \"enable\": false,\n    \"name\": \"Estudiante de último semestre\"\n}"
 						}
-					],
-					"cookie": [],
-					"body": "{\n    \"idOccupation\": \"7aeb2dfa-bc65-4260-873a-d287bb8c332b\",\n    \"enable\": false,\n    \"name\": \"Estudiante de último semestre\"\n}"
-				}
-			]
-		},
-		{
-			"name": "Delete",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "localhost:8801/list-api/v1/occupations/{{occupation_token}}",
-					"host": [
-						"localhost"
-					],
-					"port": "8801",
-					"path": [
-						"list-api",
-						"v1",
-						"occupations",
-						"{{occupation_token}}"
 					]
-				}
-			},
-			"response": [
+				},
 				{
 					"name": "Delete",
-					"originalRequest": {
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -448,41 +446,603 @@
 							]
 						}
 					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "JSON",
-					"header": [
+					"response": [
 						{
-							"key": "Vary",
-							"value": "Origin"
-						},
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8801/list-api/v1/occupations/{{occupation_token}}",
+									"host": [
+										"localhost"
+									],
+									"port": "8801",
+									"path": [
+										"list-api",
+										"v1",
+										"occupations",
+										"{{occupation_token}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 14 Feb 2025 17:17:00 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Diagnostics",
+			"item": [
+				{
+					"name": "Save Diagnostic",
+					"event": [
 						{
-							"key": "Vary",
-							"value": "Access-Control-Request-Method"
-						},
-						{
-							"key": "Vary",
-							"value": "Access-Control-Request-Headers"
-						},
-						{
-							"key": "Content-Length",
-							"value": "0"
-						},
-						{
-							"key": "Date",
-							"value": "Thu, 18 May 2023 21:40:09 GMT"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=60"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = JSON.parse(responseBody);\r",
+									"pm.environment.set(\"id_diagnostic\", response.idDiagnostic);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
 						}
 					],
-					"cookie": [],
-					"body": null
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"diagnosticType\": \"CIE10\",\r\n    \"code\": \"E662\",\r\n    \"name\": \"Obesidad extrema con hipoventilacion alveolar\",\r\n    \"description\": \"Obesidad\",\r\n    \"gender\": \"AMBOS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8801/list-api/v1/diagnostics",
+							"host": [
+								"localhost"
+							],
+							"port": "8801",
+							"path": [
+								"list-api",
+								"v1",
+								"diagnostics"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Save",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"diagnosticType\": \"CIE10\",\r\n    \"code\": \"E662\",\r\n    \"name\": \"Obesidad extrema con hipoventilacion alveolar\",\r\n    \"description\": \"Obesidad\",\r\n    \"gender\": \"AMBOS\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8801/list-api/v1/diagnostics",
+									"host": [
+										"localhost"
+									],
+									"port": "8801",
+									"path": [
+										"list-api",
+										"v1",
+										"diagnostics"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 15 Feb 2025 15:21:01 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"diagnosticType\": \"CIE10\",\n    \"code\": \"E662\",\n    \"name\": \"Obesidad extrema con hipoventilacion alveolar\",\n    \"description\": \"Obesidad\",\n    \"gender\": \"AMBOS\",\n    \"idDiagnostic\": \"ea490960-c7d0-4447-abad-e0151f23498e\",\n    \"enable\": true,\n    \"lastModified\": \"2025-02-15T10:21:01.6081915\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Diagnostic By Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = JSON.parse(responseBody);\r",
+									"pm.environment.set(\"id_diagnostic\", response.idDiagnostic);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8801/list-api/v1/diagnostics/{{id_diagnostic}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8801",
+							"path": [
+								"list-api",
+								"v1",
+								"diagnostics",
+								"{{id_diagnostic}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"diagnosticType\": \"CIE10\",\r\n    \"code\": \"O260\",\r\n    \"description\": \"Aumento excesivo de peso en el embarazo\",\r\n    \"gender\": \"FEMENINO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8801/list-api/v1/diagnostics/{{diagnostic_code}}",
+									"host": [
+										"localhost"
+									],
+									"port": "8801",
+									"path": [
+										"list-api",
+										"v1",
+										"diagnostics",
+										"{{diagnostic_code}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 15 Feb 2025 15:21:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"diagnosticType\": \"CIE10\",\n    \"code\": \"E662\",\n    \"name\": \"Obesidad extrema con hipoventilacion alveolar\",\n    \"description\": \"Obesidad\",\n    \"gender\": \"AMBOS\",\n    \"idDiagnostic\": \"ea490960-c7d0-4447-abad-e0151f23498e\",\n    \"enable\": true,\n    \"lastModified\": \"2025-02-15T10:21:01.608\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Diagnostic By Type",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8801/list-api/v1/diagnostics?diagnosticType=CIE10",
+							"host": [
+								"localhost"
+							],
+							"port": "8801",
+							"path": [
+								"list-api",
+								"v1",
+								"diagnostics"
+							],
+							"query": [
+								{
+									"key": "diagnosticType",
+									"value": "CIE10"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8801/list-api/v1/diagnostics?diagnosticType=CIE10",
+									"host": [
+										"localhost"
+									],
+									"port": "8801",
+									"path": [
+										"list-api",
+										"v1",
+										"diagnostics"
+									],
+									"query": [
+										{
+											"key": "diagnosticType",
+											"value": "CIE10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 15 Feb 2025 15:26:14 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"diagnosticType\": \"CIE10\",\n        \"code\": \"O260\",\n        \"name\": \"Aumento excesivo de peso en el embarazo\",\n        \"description\": \"Atencion a la madre por otas complicaciones principalmente relacionadas con el embarazo\",\n        \"gender\": \"FEMENINO\",\n        \"idDiagnostic\": \"1f63b949-d28f-456a-a7bf-e6704ee87585\",\n        \"enable\": true,\n        \"lastModified\": \"2025-02-15T10:26:03.606\"\n    },\n    {\n        \"diagnosticType\": \"CIE10\",\n        \"code\": \"R634\",\n        \"name\": \"Perdida anormal de peso\",\n        \"description\": \"Sintomas y signos concernientes a la alimentacion y la ingestion de liquidos\",\n        \"gender\": \"AMBOS\",\n        \"idDiagnostic\": \"3e2d1e58-9356-421a-87e9-dc54e53086fb\",\n        \"enable\": true,\n        \"lastModified\": \"2025-02-15T10:03:02.594\"\n    },\n    {\n        \"diagnosticType\": \"CIE10\",\n        \"code\": \"R635\",\n        \"name\": \"Aumento anormal de peso\",\n        \"description\": \"Sintomas y signos concernientes a la alimentacion y la ingestion de liquidos\",\n        \"gender\": \"AMBOS\",\n        \"idDiagnostic\": \"ba7d262a-3e23-4f6d-aad5-ff84916486fa\",\n        \"enable\": true,\n        \"lastModified\": \"2025-02-15T10:04:18.014\"\n    },\n    {\n        \"diagnosticType\": \"CIE10\",\n        \"code\": \"E660\",\n        \"name\": \"Obesidad debida al exceso de calorias\",\n        \"description\": \"Obesidad\",\n        \"gender\": \"AMBOS\",\n        \"idDiagnostic\": \"ba3665a8-a4a1-473e-b122-2e4336527104\",\n        \"enable\": true,\n        \"lastModified\": \"2025-02-15T10:11:13.547\"\n    },\n    {\n        \"diagnosticType\": \"CIE10\",\n        \"code\": \"E661\",\n        \"name\": \"Obesidad inducida por drogras\",\n        \"description\": \"Obesidad\",\n        \"gender\": \"AMBOS\",\n        \"idDiagnostic\": \"5c16a43c-7e74-491c-ad3b-4d1edf2a71da\",\n        \"enable\": true,\n        \"lastModified\": \"2025-02-15T10:12:07.894\"\n    },\n    {\n        \"diagnosticType\": \"CIE10\",\n        \"code\": \"E662\",\n        \"name\": \"Obesidad extrema con hipoventilacion alveolar\",\n        \"description\": \"Obesidad\",\n        \"gender\": \"AMBOS\",\n        \"idDiagnostic\": \"ea490960-c7d0-4447-abad-e0151f23498e\",\n        \"enable\": true,\n        \"lastModified\": \"2025-02-15T10:21:01.608\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var response = JSON.parse(responseBody);\r",
+									"pm.environment.set(\"id_diagnostic\", response.idDiagnostic);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"diagnosticType\": \"CIE10\",\r\n    \"code\": \"O260\",\r\n    \"name\": \"Aumento excesivo de peso en el embarazo\",\r\n    \"description\": \"Atencion a la madre por otas complicaciones principalmente relacionadas con el embarazo\",\r\n    \"gender\": \"FEMENINO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8801/list-api/v1/diagnostics/{{id_diagnostic}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8801",
+							"path": [
+								"list-api",
+								"v1",
+								"diagnostics",
+								"{{id_diagnostic}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"diagnosticType\": \"CIE10\",\r\n    \"code\": \"O260\",\r\n    \"name\": \"Aumento excesivo de peso en el embarazo\",\r\n    \"description\": \"Atencion a la madre por otas complicaciones principalmente relacionadas con el embarazo\",\r\n    \"gender\": \"FEMENINO\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8801/list-api/v1/diagnostics/{{diagnostic_code}}",
+									"host": [
+										"localhost"
+									],
+									"port": "8801",
+									"path": [
+										"list-api",
+										"v1",
+										"diagnostics",
+										"{{diagnostic_code}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 15 Feb 2025 15:26:03 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"diagnosticType\": \"CIE10\",\n    \"code\": \"O260\",\n    \"name\": \"Aumento excesivo de peso en el embarazo\",\n    \"description\": \"Atencion a la madre por otas complicaciones principalmente relacionadas con el embarazo\",\n    \"gender\": \"FEMENINO\",\n    \"idDiagnostic\": \"1f63b949-d28f-456a-a7bf-e6704ee87585\",\n    \"enable\": true,\n    \"lastModified\": \"2025-02-15T10:26:03.6066528\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"diagnosticType\": \"CIE10\",\r\n    \"code\": \"A010\",\r\n    \"name\": \"Fiebre tifoidea\",\r\n    \"description\": \"Fiebres tifoidea y paratifoidea\",\r\n    \"gender\": \"AMBOS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8801/list-api/v1/diagnostics/{{id_diagnostic}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8801",
+							"path": [
+								"list-api",
+								"v1",
+								"diagnostics",
+								"{{id_diagnostic}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"diagnosticType\": \"CIE10\",\r\n    \"code\": \"A010\",\r\n    \"name\": \"Fiebre tifoidea\",\r\n    \"description\": \"Fiebres tifoidea y paratifoidea\",\r\n    \"gender\": \"AMBOS\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8801/list-api/v1/diagnostics/{{id_diagnostic}}",
+									"host": [
+										"localhost"
+									],
+									"port": "8801",
+									"path": [
+										"list-api",
+										"v1",
+										"diagnostics",
+										"{{id_diagnostic}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 15 Feb 2025 15:40:23 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
 				}
 			]
 		}
