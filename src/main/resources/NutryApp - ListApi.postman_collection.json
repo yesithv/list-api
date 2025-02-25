@@ -412,7 +412,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"idOccupation\": \"7aeb2dfa-bc65-4260-873a-d287bb8c332b\",\n    \"enable\": false,\n    \"name\": \"Estudiante de último semestre\"\n}"
+							"body": "{\n    \"idOccupation\": \"7beb2dfa-bc65-4260-873a-d287bb8c332b\",\n    \"enable\": false,\n    \"name\": \"Estudiante de último semestre\"\n}"
 						}
 					]
 				},
